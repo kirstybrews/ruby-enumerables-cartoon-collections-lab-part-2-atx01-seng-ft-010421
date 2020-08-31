@@ -19,6 +19,8 @@ end
 def find_valid_calls(planeteer_calls)
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
   planeteer_calls.find do |string|
-    string == valid_calls.join(" ").split("||")
+    string == valid_calls.find do |string2|
+      string2 == string
+    end
   end
 end
